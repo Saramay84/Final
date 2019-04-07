@@ -1,0 +1,162 @@
+*{
+      margin:0px;
+      padding:0px;
+      box-sizing: border-box;
+      font-family: 'Robot Mono', monospace;
+}
+
+.navigation_logo{
+  display: block;
+}
+
+.a{
+  transition: color.25s ease-in;
+}
+
+nav{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 6vh;
+      background-color: seashell;
+      font-family: 'Robot Mono', monospace;
+      position: relative;
+}
+
+
+
+.logo{
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  position: absolute;
+}
+
+.content p {
+  margin-top: 20px;
+  padding-left: 10px;
+  width: 900px;
+  margin:30px auto;
+  line-height:30px;
+  text-align: left;
+  font-size:20px;
+
+}
+
+.content h4 {
+  margin-top: 20px;
+  padding-left: 10px;
+  width: 900px;
+  margin:20px auto;
+  line-height:20px;
+  justify-content: flex-start;
+  font-size:20px;
+
+}
+
+
+
+.nav-links{
+  display: flex;
+  background-color: seashell;
+  justify-content: space-around;
+  width: 40%;
+
+}
+
+.nav-links li{
+    list-style: none;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+
+}
+
+.nav-links a{
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 14px;
+  display: inline-block;
+    float: right;
+    padding: 8px 8px 8px 32px;
+    display: block;
+    transition: 0.3s;
+  }
+
+
+.burger{
+  display: none;
+  cursor: pointer;
+}
+
+.burger div{
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  margin: 3px;
+}
+
+
+.backgroudImage{
+  position: static;
+  top: 30px;
+  left: 40px;
+  right: 40px
+  width: 40%;
+
+}
+
+@media screen and (max-width:1024px){
+      .nav-links{
+            width:60%;
+      }
+}
+
+@media screen and (max-width:768px){
+      body{
+          overflow-x: visible;
+      }
+    .nav-links{
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in;
+    }
+    .nav-links li{
+        opacity:0;
+    }
+    .burger{
+      display: block;
+    }
+}
+
+.nav-active{
+      transform: translateX(0%);
+      background-color: seashell;
+}
+
+@keyframes navLinkFade{
+    from{
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to{
+        opacity:1;
+          transform: translateX(0px);
+    }
+}
